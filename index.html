@@ -1,0 +1,73 @@
+<?php
+$to="Artem.s92@bk.ru";
+$tema="warmhouse";
+$message="Фамилия: ".$_POST['surname']."\r\n";
+$message.="Имя: " .$_POST['name']."\r\n";
+$message.="Телефон: ".$_POST['phone']."\r\n";
+$message.="E-mail: ".$_POST['email']."\r\n";
+$message.="Сообщение: ".$_POST['message']."\r\n";
+
+mail($to, $tema, $message);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>WarmHouse</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="img/logo.png" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+	<header>
+		<div class="container">
+		   <div class="row">
+		   <div class="col-md-8 ">
+			<p class="headname">Warm<span>House</span></p>
+			</div>
+			<div class="col-md-3 col-md-offset-1">
+			<p class="tel"><label>тел:</label>
+			  <span>8(708)-278-67-68</span>
+			</p>
+			</div>
+			</div>
+		</div>
+	</header>
+	<content>
+		<div class="container container-top">
+	      <h1>Агентсво недвижимости в актобе</h1>
+		  <div class="row">
+		  	<div class="col-md-8">
+		  		<ul class="list">
+		  			<li>Продадим вашу квартиру по выгодной цене и в кратчайшие сроки</li>
+		  			<li>Бесплатная консультация по оценке недвижимости</li>
+		  			<li>Большая клиентская база</li>
+		  			<li>Индивидуальный подход к каждому клиенту</li>
+		  		</ul>
+		  	</div>
+		  	<div class="col-md-4">
+		  		<div class="welll">
+				<h4>Оформить заявку</h4>
+				<form action="" method="post" >	
+					<input type="text" name="surname" class="form-control"  placeholder="Фамилия">		
+					<input type="text" name="name" class="form-control"  placeholder="Имя">
+					<input type="text" name="phone" class="form-control" placeholder="Телефон">
+					<input type="text" name="email" class="form-control" placeholder="E-mail">
+					<input type="text" name="message" class="form-control" placeholder="Сообщение">
+					<input type="submit" name="button" value="Отправить" class="btn btn-default btn-block">
+
+				</form>
+			</div>
+		  	</div>
+		  </div>
+		</div>
+	</content>
+	<footer>
+		<div class="container">
+			<p>Наши контакты: <span>8(708)-278-67-68</span>;</p>
+			<p>Адрес: <span>Маресьева 40Б</span>;</p>
+			<p>instagram <span>@agentstvo_aktobe</span></p>
+		</div>
+	</footer>
+</body>
+</html>
